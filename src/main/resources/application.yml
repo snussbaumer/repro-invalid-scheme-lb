@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+      discovery.enabled: false
+    discovery.client.simple.instances:
+      backend-service:
+        - uri: http://localhost:9004
+          metadata:
+            management.port: 9004
+            managementPath: /admin
