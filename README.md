@@ -2,6 +2,9 @@
 
 repro project to show "invalid scheme [lb]" problem
 
-change spring-boot-parent to 3.1.5 to see that DemoApplicationTest runs fine.
+run it with `mvn test` and you'll get `DemoApplicationTests.test:37 Status expected:<200 OK> but was:<500 INTERNAL_SERVER_ERROR>`
+due to and error `Invalid scheme [lb]`
 
-the problem is in 3.1.6 and 3.1.7
+now change spring-boot-parent version to 3.1.5 in pom.xml and run `mvn test` again and you'll see that the test runs fine.
+
+the problem exists in with versions 3.1.6 and 3.1.7

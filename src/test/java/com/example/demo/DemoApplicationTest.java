@@ -19,7 +19,7 @@ import com.github.tomakehurst.wiremock.junit5.WireMockTest;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureWebTestClient(timeout = "PT10M")
 @WireMockTest(httpPort = 9004)
-class DemoApplicationTests {
+class DemoApplicationTest {
 
 	@Autowired
 	private WebTestClient webTestClient;
